@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Loader";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    #loader {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.75) url(Content/Loader/Loader.gif) no-repeat center center;
+        z-index: 10000;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="Name" placeholder="Enter name" />
+            </div>
+
+            <button type="submit" class="btn btn-sm btn-primary" id="btnSave">Save</button>
+        </div>
+        <div id="loader"></div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/Loader.js"></script>
